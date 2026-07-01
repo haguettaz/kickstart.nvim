@@ -6,15 +6,6 @@ vim.pack.add {
   'https://github.com/nvim-lua/plenary.nvim',
   'https://github.com/MunifTanjim/nui.nvim',
 }
+-- Keymap to toggle the tree view with your file highlighted
+  vim.keymap.set('n', '<leader>e', '<cmd>Neotree toggle reveal<CR>', { desc = 'Toggle Neo-tree' })
 
-vim.keymap.set('n', '\\', '<Cmd>Neotree reveal<CR>', { desc = 'NeoTree reveal', silent = true })
-
-require('neo-tree').setup {
-  filesystem = {
-    window = {
-      mappings = {
-        ['\\'] = 'close_window',
-      },
-    },
-  },
-}
